@@ -1,0 +1,251 @@
+/* clearfix BUT REMOVE box-sizing hacks for media quary !=important*/
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* part of having a sticky footer */
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    background-image: url("../images/spiration-light.png");  
+    margin-bottom: 60px;
+}
+
+/* header and header content styling */
+
+header {
+    background-color: #ffffff;
+    border-bottom: solid 2px;
+    border-color: #cccccc;
+}
+
+.headercontent{
+    font-family: 'Georgia', 'Times', 'Times New Roman', 'serif';
+}
+
+h1 {
+    color: #fff;
+    float: left;
+    background-color: #4aaaa5;
+    height: 75px;
+    padding: 10px;
+    line-height: 55px;
+    font-size: 32px;
+
+}
+
+.tabs {
+    display: inline;
+    float: right;
+    padding: 5px;
+}
+
+/* styling of list elements of nav bar */
+
+.tabs ul{
+    list-style: none;
+}
+
+.tabs li{
+    display: inline-block;
+    margin-left: 20px;
+    padding-top: 10px;
+    position: relative;
+}
+
+.tabs ul > li > a{
+    color: #777777;
+    text-decoration: none;
+
+}
+
+/* hover animation for each nav link */
+
+.tabs ul > li > a:hover {
+    color: black;
+}
+
+.tabs ul > li > a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    top: 5px;
+    width: 100%;
+    background-color: #777777;
+    
+    position: absolute;
+    width: 0%;
+
+    transition: all ease-in-out 200ms;
+}
+
+.tabs ul > li > a:hover::before {
+    width: 100%;
+}
+
+/* white backgrounded main content area that is 960px wide */
+
+section {
+    padding-top: 20px;
+}
+
+h2{
+    color: #4aaaa5;
+    font-size: 28px;
+    border-bottom: solid 3px;
+    border-color: #cccccc;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.maincontent{
+    font-family: 'Arial', 'Helvetica Neue', 'Helvetica', 'sans-serif';
+    line-height: 25px;
+    margin: auto;
+    width: 960px;  
+    color: #777777;
+    background-color: #ffffff;  
+    border: solid 1px;
+    border-color: #dddddd;
+    padding: 20px;
+}
+
+.headshot {
+    float: left;
+    margin-right: 10px;
+}
+
+/* footer definition for sticky footer */
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #666666;
+    text-align: center;
+    color: #cccccc;
+    height: 60px;
+    padding-top: 25px;
+    padding-bottom: 0px;
+    font-size: 8pt;
+    border-top: solid 8px;
+    border-color: #4aaaa5;
+}
+
+/* portoflio image styling with box text overlay */
+
+.container {
+    position: relative;
+    width: 320px;
+    float: left;
+    margin: 10px;
+}
+
+.text {
+    position: absolute;
+    font-size: 40;
+    width: 280px;
+    color: #cccccc;
+    background-color: #4aaaa5;
+    text-align: center;
+    padding: 10px 20px;
+    bottom: 25px;
+
+
+}
+
+.portfolio {
+    width: 320px;
+ 
+}
+
+/* styling of input boxes for contact information */
+
+input[type=text] {
+    width: 100%;
+    border: solid 1px #cccccc;
+}
+
+input[type=submit] {
+    background-color: #4aaaa5;
+    color: #ffffff;
+    padding: 8px 20px 8px 20px;
+    border: solid 0px;
+    
+}
+
+input[type=submit]:hover {
+    background-color: #228999
+}
+
+textarea[type=text] {
+    width: 100%;
+    border: solid 1px #cccccc;
+}
+
+/* ADDING MEDIA TAGS; WHAT FUN! */
+
+@media (max-width:980px) {
+    .headercontent {
+        text-align:center;
+    }
+    .tabs {
+        float: none;
+    }
+    h1 {
+        float:none;
+    }
+
+    .maincontent {
+        width:90%;
+    }
+}
+
+@media (max-width:768px) {
+    .headshot {
+        width: 50%;
+        height: auto;
+    }
+
+    .headercontent {
+        text-align:center;
+    }
+    .tabs {
+        float: none;
+    }
+    h1 {
+        float:none;
+    }
+
+    .maincontent {
+        width:90%;
+    }
+}
+
+@media (max-width:640px) {
+    .headshot {
+        width:100%;
+        height:auto;
+    }
+
+    .headercontent {
+        text-align:center;
+    }
+    .tabs {
+        float: none;
+    }
+    h1 {
+        float:none;
+    }
+
+    .maincontent {
+        width:90%;
+    }
+}
