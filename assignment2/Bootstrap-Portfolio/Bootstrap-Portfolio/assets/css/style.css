@@ -1,0 +1,69 @@
+.block {
+    background-color: #ffffff;
+    border: #cccccc solid 1px;
+    padding: 2rem;
+}
+
+.center-block {
+    margin: 10px 1px 10px 1px;
+}
+
+h1 {
+    color:#4aaaa5;
+    font-family: 'Arial', 'Helvetica Neue', 'Helvetica', 'sans-serif';
+    
+}
+
+.navbar-light > .navbar-brand {
+    color: #ffffff;
+    background-color: #4aaaa5;
+    font-family: 'Arial', 'Helvetica Neue', 'Helvetica', 'sans-serif';
+    padding: 8px;
+}
+
+.navbar-light > .navbar-brand:hover {
+    color: #e0e0e0;
+}
+
+.portfolio {
+    width:200px;
+    height:auto;
+    padding:10px;
+}
+
+.footer {
+    background-color: #666666;
+    text-align: center;
+    color: #cccccc;
+    height: 50px;
+    padding-top: 25px;
+    padding-bottom: 0px;
+    font-size: 8pt;
+    border-top: solid 8px;
+    border-color: #4aaaa5;
+}
+
+html {
+    position: relative;
+    min-height: 100%
+    }
+    
+body {
+    background-image: url("../images/spiration-light.png");
+    margin-bottom: 60px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #666666;
+    text-align: center;
+    color: #cccccc;
+    height: 60px;
+    padding-top: 25px;
+    padding-bottom: 0px;
+    font-size: 8pt;
+    border-top: solid 8px;
+    border-color: #4aaaa5;
+}
