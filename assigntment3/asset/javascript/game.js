@@ -29,12 +29,11 @@ function psychicGame() {
         var isLetter = alphabet.indexOf(event.key);
         if (isLetter !== -1) {
             var userLetterUpper = event.key.toUpperCase();
-            console.log(userLetterUpper);
-            console.log(guessesLeft.textContent);
             {
                 if (userLetterUpper === computerLetter) {
                     alert("You guess it! It was " + userLetterUpper);
-                    wins.textContent = wins.textContent + 1;
+                    console.log(wins.textContent);
+                    wins.textContent -= -1;
                     userLetter.textContent = "";
                     guessesLeft.textContent = 9;
                     psychicGame();
@@ -43,9 +42,10 @@ function psychicGame() {
                     guessesLeft.textContent -= 1;
                 } else {
                     alert("You ran out of guesses! Play again!");
-                    losses.textContent = losses.textContent + 1;
+                    losses.textContent -= -1;
                     userLetter.textContent = "";
                     guessesLeft.textContent = 9;
+                    psychicGame();
                 }
             }
         }
