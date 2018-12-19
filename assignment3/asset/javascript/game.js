@@ -14,41 +14,51 @@ var userLetter = document.getElementById("lettersGuessed");
 var guessesLeft = document.getElementById("guessesLeft");
 var wins = document.getElementById("wins");
 var losses = document.getElementById("losses");
-
+var computerLetter = "";
 
 
 console.log(alphabet);
 
-
-function psychicGame() {
+pickComputerLetter = function () {
     //Create a random letter for the computer which will always be upper case
-    var computerLetter = alphabet[Math.floor(Math.random() * alphabet.length)].toUpperCase();
-    //Verify the desired result
+    computerLetter = alphabet[Math.floor(Math.random() * alphabet.length)].toUpperCase();
     console.log(computerLetter);
-    document.onkeyup = function (event) {
-        var isLetter = alphabet.indexOf(event.key);
-        if (isLetter !== -1) {
-            var userLetterUpper = event.key.toUpperCase();
-            {
-                if (userLetterUpper === computerLetter) {
-                    alert("You guess it! It was " + userLetterUpper);
-                    console.log(wins.textContent);
-                    wins.textContent -= -1;
+}
+
+pickComputerLetter();
+
+document.onkeyup = function (event) {
+    var isLetter = alphabet.indexOf(event.key);
+    if (isLetter !== -1) {
+        var userLetterUpper = event.key.toUpperCase();
+        {   
+            if (userLetterUpper === computerLetter) {
+                userLetter.innerHTML += "<br><br>" + userLetterUpper + "!!!";
+                setTimeout(function(){alert("You guess it! It was " + userLetterUpper);}, 100);
+                setTimeout(function(){
+                    wins.textContent = parseInt(wins.textContent) + 1;
                     userLetter.textContent = "";
-                    guessesLeft.textContent = 9;
-                    psychicGame();
-                } else if (guessesLeft.textContent > "0") {
-                    userLetter.textContent += userLetterUpper + ", ";
-                    guessesLeft.textContent -= 1;
-                } else {
-                    alert("You ran out of guesses! Play again!");
-                    losses.textContent -= -1;
+                    guessesLeft.textContent = 9;}, 200);
+                pickComputerLetter();
+            
+            } else if (guessesLeft.textContent == 9) {
+                userLetter.textContent += userLetterUpper;
+                guessesLeft.textContent -= 1;
+            
+            } else if (guessesLeft.textContent > 1) {
+                userLetter.textContent += ", " + userLetterUpper;
+                guessesLeft.textContent -= 1;
+            
+            } else {
+                guessesLeft.textContent -= 1;
+                userLetter.textContent += ", " +userLetterUpper;
+                setTimeout(function(){alert("You ran out of guesses! Play again!"); }, 100);
+                setTimeout(function(){
+                    losses.textContent = parseInt(losses.textContent) + 1;
                     userLetter.textContent = "";
-                    guessesLeft.textContent = 9;
-                    psychicGame();
-                }
+                    guessesLeft.textContent = 9;}, 200);
+                pickComputerLetter();
             }
         }
     }
-};
-psychicGame();
+}
