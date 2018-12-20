@@ -4,8 +4,7 @@ body {
 }
 
 .gameContent {
-    margin-right: 100px;
-    padding-right: 100px;
+    min-width:25%;
     float: left;
 }
 
