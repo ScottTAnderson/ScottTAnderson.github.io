@@ -1,4 +1,17 @@
 body {
-    margin-left: 20%;
+    margin-left: 10%;
     margin-top: 5%
+}
+
+.gameContent {
+    margin-right: 100px;
+    padding-right: 100px;
+    float: left;
+}
+
+img {
+    width: 400px;
+    height: auto;
+    border-radius: 50%;
+    float: left;
 }
