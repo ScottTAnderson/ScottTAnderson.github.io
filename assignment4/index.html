@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Star Wars Battle Arena</title>
+
+    <!-- Link CSS Reset -->
+    <link href="stylesheet" href="assets/css/reset.css">
+    <!-- Link Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <!-- Link External Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Link Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Link External JS -->
+    <script src="assets/javascript/game.js"></script>
+</head>
+
+<body>
+    <div class="gameArea">
+        <div class="clearfix">
+            <header>
+                <h1>Star Wars Battle Arena</h1>
+            </header>
+        </div>
+        <div class="characterArea">
+            <div class="clearfix characterSelection">
+                <div class="characterBox character1" hitPoints="140" attackPower="6" counterAttackPower="8">
+                    <img src="assets/images/lukeskywalker.jpg" class="character">
+                    <div class="characterText">Luke Skywalker</div>
+                    <div class="characterHealth"></div>
+                </div>
+                <div class="characterBox character2" hitPoints="124" attackPower="5" counterAttackPower="12">
+                    <img src="assets/images/yoda.jpg" class="character">
+                    <div class="characterText">Yoda</div>
+                    <div class="characterHealth"></div>
+                </div>1
+                <div class="characterBox character3" hitPoints="150" attackPower="4" counterAttackPower="14">
+                    <img src="assets/images/kyloren.jpg" class="character">
+                    <div class="characterText">Kylo Ren</div>
+                    <div class="characterHealth"></div>
+                </div>
+                <div class="characterBox character4" hitPoints="175" attackPower="3" counterAttackPower="16">
+                    <img src="assets/images/darthvader.jpg" class="character">
+                    <div class="characterText">Darth Vader</div>
+                    <div class="characterHealth"></div>
+                </div>
+            </div>
+            <div class="selectedCharacter">
+                <h2>Your Character</h2>
+                <div class="hero"></div>
+            </div>
+            <div class="remainingOpponents">
+                <h2>Opponents Available to Challenge</h2>
+                <div class="enemyPool"></div>
+            </div>
+            <div class="currentOpponent">
+                <h2>Current Opponent</h2>
+                <div class="enemy"></div>
+            </div>
+        </div>
+        <div class="fightControls">
+            <h2>Fight Section</h2>
+            <button type="button" class="btn execute">Execute</button>
+        </div>
+        <div class="damageReport"></div>
+        <div class="resetButton">
+            <button type="button" class="btn execute">Reset</button>
+        </div>
+        
+
+
+</body>
+
+</html>
