@@ -1,0 +1,36 @@
+/* CSS REQUIRED */
+.state-icon {
+    left: -10px;
+}
+.list-group-item-primary {
+    color: rgb(255, 255, 255);
+    background-color: rgb(66, 139, 202);
+}
+
+/* DEMO ONLY - REMOVES UNWANTED MARGIN */
+.well .list-group {
+    margin-bottom: 0px;
+}
+
+body {
+    margin-bottom: 50px;
+}
+
+.nav-item {
+    color: #feffff;
+    font-weight: 600;
+}
+
+.navbar-brand {
+    color: black;
+    font-weight: 800;
+}
+
+.card-link {
+    color: #feffff;
+    font-weight: 600
+}
+
+.btn {
+    font-weight: 600;
+}
